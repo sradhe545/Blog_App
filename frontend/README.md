@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# Blog-Appliction-MERN-Stack
+ Using React, Node.js, Express &amp; MongoDB . A Full Stack MERN Blog Application.  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features ⤵
 
-## Available Scripts
+Using React, Node.js, Express & MongoDB you'll learn how to build a Full Stack MERN Application - from start to finish.It is a Blog App that allows users to post interesting blogs that happened in their lives.
+- User can able to login signup
+- User can add his blog if logged in
+- User can update his own post
+- User can delete his post as well
+- User can update his post as well
+- User can update his details as well
 
-In the project directory, you can run:
 
-### `npm start`
+## Screenshots ⤵
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. Register Page
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Register Page](https://i.ibb.co/XVLw0Wq/Screenshot-1348.png")
 
-### `npm test`
+### 2. Login Page
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Login Page](https://i.ibb.co/KNSVKfC/Screenshot-1347.png)
 
-### `npm run build`
+### 3. Home Page
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Home Page](https://i.ibb.co/5WKw8nJ/Screenshot-1342.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 4. Blogs Page
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Blogs View Page](https://i.ibb.co/M91FjDf/Screenshot-1343.png)
 
-### `npm run eject`
+### 5. Individual Blog Page
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![Individual Blog Page](https://i.ibb.co/Dw7dLKm/Screenshot-1346.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 6. Upload Blog 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Upload Blog ](https://i.ibb.co/z2PQ5yh/Screenshot-1344.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 7. Update User
 
-## Learn More
+![Update User](https://i.ibb.co/F7gZzvC/Screenshot-1345.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## How to See this project on your local System
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Step 1 :
+    > Clone the projet repository.
 
-### Analyzing the Bundle Size
+### Step 2 :
+    > cd frontend
+    <!-- - move to repo directory  -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Step 3 :
+    > run npm install
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Step 4 :
+    > run npm start
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## How to deploy this project 
 
-### Deployment
+### Step 1 :
+    > Clone the projet repository.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Step 2 :
+    > cd frontend
+    > cd backend (in another terminal)
+    <!-- - move to repo directory  -->
 
-### `npm run build` fails to minify
+### Step 3 :
+    > run npm install (in frontend as well as in backend folder)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Step 4 :
+    > In back end add env file
+    - Add following ENV variables:-
+        > PORT -"Your port no. at which you wnt to run your server"
+        > MONGO_URL -"Your mongo db url"
+        > JWT_SECRET -"Your JWT secret Key"
+
+### Step 5 :
+    > npm start in frontend as well as backend 
+
+
+
+## Tech Stack ⤵
+
+- [React Js](https://reactjs.org/docs/getting-started.html)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [MongoDB](https://www.mongodb.com/)
+- [ExpressJS](https://expressjs.com/)
+- [Json Web Token](https://jwt.io/)
+- [Vercel](https://vercel.com/)
+
+
+## Connect with author ⤵
+
+- [Radhe Shyam Soni](https://www.linkedin.com/in/radhe-shyam-soni-692529148/) 
+
+
+
+## Feedback ⤵
+
+If you have any feedback or queries, please reach out to us at sradhe545@gmail.com.
