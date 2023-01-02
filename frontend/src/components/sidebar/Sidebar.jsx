@@ -7,7 +7,7 @@ export default function Sidebar() {
 
   useEffect(() => {
     const getCats = async () => {
-      const res = await axios.get("http://localhost:8080/category");
+      const res = await axios.get("https://radheblog-production.up.railway.app/category");
       setCats(res.data);
     };
     getCats();

@@ -1,26 +1,32 @@
 import "./login.css";
 import axios from "axios";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { Context } from "../../context/Context";
 export default function Login() {
-  
+  const navigate=useNavigate()
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
+  const {dispatch,isFetching}=useContext(Context)
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError(false);
+  dispatch({type:"LOGIN_START"})
+
     try {
-      const res = await axios.post("http://localhost:8080/user/login", {
+      const res = await axios.post("https://radheblog-production.up.railway.app/user/login", {
         email,
         password,
       })
+      dispatch({type:"LOGIN_SUCCESS",payload:res.data.others})
      localStorage.setItem("blog-token",(res.data.token))
-      
+      navigate("/")
     } catch (err) {
-      setError(true);
+      dispatch({type:"LOGIN_FAILED"})
     }
   };
+ 
   return (
     <div className="login">
       <span className="loginTitle">Login</span>
@@ -29,7 +35,7 @@ export default function Login() {
         <input className="loginInput" type="text" placeholder="Enter your email..." onChange={(e) => setEmail(e.target.value)}/>
         <label>Password</label>
         <input className="loginInput" type="password" placeholder="Enter your password..."  onChange={(e) => setPassword(e.target.value)}/>
-        <button type="submit" className="loginButton">Login</button>
+        <button type="submit" className="loginButton" disabled={isFetching}>Login</button>
       </form>
       <button className="loginRegisterButton">
         <Link className="link" to="/register">

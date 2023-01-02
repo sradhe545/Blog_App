@@ -6,9 +6,13 @@ import Settings from "./pages/settings/Settings";
 import Single from "./pages/single/Single";
 import Write from "./pages/write/Write";
 import {  Routes, Route } from "react-router-dom";
+import { useContext } from "react";
+import { Context } from "./context/Context";
+import Mypost from "./pages/mypost/mypost";
 
 function App() {
-  const currentUser = true;
+  const {user}=useContext(Context)
+  console.log(user);
   return (
     <>
      <Topbar />
@@ -24,7 +28,7 @@ function App() {
        
         <Route path="/register" element={<Register />}/> 
           
-          {/* {currentUser ? <Homepage /> : <Register />} */}
+        {/* <Route path="/mypost" element={<Mypost />}/>  */}
         
         <Route path="/login" element={<Login />}/> 
           {/* {currentUser ? <Homepage /> : <Login />} */}

@@ -12,7 +12,7 @@ export default function Register() {
     e.preventDefault();
     setError(false);
     try {
-      const res = await axios.post("http://localhost:8080/user/signup", {
+      const res = await axios.post("https://radheblog-production.up.railway.app/user/signup", {
         username,
         email,
         password,

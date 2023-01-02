@@ -1,8 +1,16 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Context } from "../../context/Context";
 import "./topbar.css";
 
 export default function Topbar() {
-  const user = true;
+  const {user,dispatch}=useContext(Context)
+  const navigate=useNavigate()
+  const handleLogout = ()=>{
+    dispatch({type:'LOGOUT'})
+    navigate("/login")
+  }
+  console.log(user);
   return (
     <div className="top">
       <div className="topLeft">
@@ -19,13 +27,22 @@ export default function Topbar() {
             </Link>
           </li>
           <li className="topListItem">ABOUT</li>
-          <li className="topListItem">CONTACT</li>
-          <li className="topListItem">
+          {/* {
+            user&&<li className="topListItem">
+            <Link className="link" to="/mypost">
+             MY POST
+            </Link>
+          </li>
+          } */}
+          {
+            user&&<li className="topListItem">
             <Link className="link" to="/write">
               WRITE
             </Link>
           </li>
-          {user && <li className="topListItem">LOGOUT</li>}
+          }
+          
+          {user && <li className="topListItem" onClick={handleLogout}>LOGOUT</li>}
         </ul>
       </div>
       <div className="topRight">
@@ -33,7 +50,7 @@ export default function Topbar() {
           <Link className="link" to="/settings">
             <img
               className="topImg"
-              src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+              src={user.profilePic}
               alt=""
             />
           </Link>
