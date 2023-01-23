@@ -9,7 +9,7 @@ export default function Homepage() {
   const location = useLocation();
   const [data,setData] = useState([])
   async function  getAllPost(){
-  const response=await axios.get("https://radheblog-production.up.railway.app/post/all").then((res)=>{
+  const response=await axios.get("https://blogapp-6huo.onrender.com/post/all").then((res)=>{
     setData(res.data);
   })
   }

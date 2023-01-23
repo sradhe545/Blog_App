@@ -31,7 +31,7 @@ export default function Settings() {
       data.append("file", file);
       updatedUser.photo = filename;
       try {
-        await axios.post("https://radheblog-production.up.railway.app/upload", data);
+        await axios.post("https://blogapp-6huo.onrender.com/upload", data);
         
       } catch (err) {}
     }
@@ -39,7 +39,7 @@ export default function Settings() {
 
 
     try {
-      const res = await axios.put("https://radheblog-production.up.railway.app/user/update/"+user._id, updatedUser,{
+      const res = await axios.put("https://blogapp-6huo.onrender.com/user/update/"+user._id, updatedUser,{
         headers: {
             'Authorization': `Bearer ${token}`
           }

@@ -25,14 +25,14 @@ export default function Write() {
       data.append("file", file);
       newPost.photo = filename;
       try {
-        await axios.post("https://radheblog-production.up.railway.app/upload", data);
+        await axios.post("https://blogapp-6huo.onrender.com/upload", data);
       } catch (err) {}
     }
 
 
 
     try {
-      const res = await axios.post("https://radheblog-production.up.railway.app/post/create", newPost,{
+      const res = await axios.post("https://blogapp-6huo.onrender.com/post/create", newPost,{
         headers: {
             'Authorization': `Bearer ${token}`
           }

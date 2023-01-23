@@ -15,7 +15,7 @@ export default function Login() {
   dispatch({type:"LOGIN_START"})
 
     try {
-      const res = await axios.post("https://radheblog-production.up.railway.app/user/login", {
+      const res = await axios.post("https://blogapp-6huo.onrender.com/user/login", {
         email,
         password,
       })

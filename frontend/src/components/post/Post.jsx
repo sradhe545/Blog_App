@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./post.css";
 import {format} from 'timeago.js'
 export default function Post({_id, categories,title,photo,desc,createdAt}) {
-  const PF="https://radheblog-production.up.railway.app/images/"
+  const PF="https://blogapp-6huo.onrender.com/images/"
   return (
     <div className="post">
       {

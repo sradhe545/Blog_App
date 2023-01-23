@@ -10,10 +10,10 @@ export default function SinglePost() {
   let token=localStorage.getItem("blog-token")
   const path = location.pathname.split("/")[2];
   const [post, setPost] = useState({});
-  const pf="https://radheblog-production.up.railway.app/images/"
+  const pf="https://blogapp-6huo.onrender.com/images/"
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get("https://radheblog-production.up.railway.app/post/" + path);
+      const res = await axios.get("https://blogapp-6huo.onrender.com/post/" + path);
       console.log(res.data.msg);
        setPost(res.data.msg);
     };
@@ -28,7 +28,7 @@ export default function SinglePost() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`https://radheblog-production.up.railway.app/post/delete/${post._id}`,{
+      await axios.delete(`https://blogapp-6huo.onrender.com/post/delete/${post._id}`,{
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -39,7 +39,7 @@ export default function SinglePost() {
 
   const handleUpdate = async () => {
     try {
-      let res=await axios.put(`https://radheblog-production.up.railway.app/post/update/${post._id}`,{title,desc}, {
+      let res=await axios.put(`https://blogapp-6huo.onrender.com/post/update/${post._id}`,{title,desc}, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
